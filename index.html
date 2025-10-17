@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Ameeenu fatu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1> no thing dey your mind only nyansh nyansh haba ameenu </h1>
-<img src="Screenshot_20240825-022219.jpg">
-<h1>who the fuck is amanda</h1>
+    <div class="container">
+        <h1>WELCOME TO MY PROFILE</h1>
 
+<div id="info">
+    <p class="welcome-text">click to view my details</p>
+</div>
+<div class="button-container">
+<button id="showInfoBtn" onclick="displayInfo()">show my info</button>
+<button id="showAlertBtn" onclick="showAlert()">show welcome message</button>
+<button id="clearBtn" onclick="clearInfo()">clear Info</button>
+<button id="instaBtn"onclick="openInstagram()">my instgaram</button>
+    </div>
+</div>
+    <script>
+let name="oga hafeeezu";
+let skill="html";
+let future="web developer";
+let favouritemedia ="instgaram";
+let phoneNumber="+07069398928";
 
-<h1>and who the fuck says you are virgin ?</h1>
-
-  </body>
+function displayInfo(){
+    const infoDiv=document.getElementById("info");
+    infoDiv.innerHTML=
+    "<strong>Name:</strong>"+name+"<br>"+
+    "<strong>skill:</strong>"+skill+"<br>"+
+    "<strong>future:</strong>"+future+"<br>"+
+    "<strong>phoneNumber:</strong>"+phoneNumber+"<br>"+
+    "<strong>favouritemedia:</strong>"+favouritemedia;
+}
+function showAlert(){
+    alert("hello everyone welcome to my profile!");
+}
+ function clearInfo(){
+    const infoDiv=document.getElementById("info");
+    infoDiv.innerHTML = '<p class="welcome-text">click "show my info" to see my details!</p>';
+    infoDiv.classList.remove("show");
+ }
+function openInstagram(){
+    window.open("https://instagr.am/malhafeezu__");
+}
+</script>   
+    
+</body>
 </html>
